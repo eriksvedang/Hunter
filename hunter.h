@@ -1,3 +1,6 @@
+#ifndef HUNTER_H
+#define HUNTER_H
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,3 +14,5 @@ void hunter_print_allocations();
 
 #define MALLOC(size) hunter_malloc((size), __FILE__, __LINE__);
 #define FREE(size) hunter_free(size);
+
+#endif
