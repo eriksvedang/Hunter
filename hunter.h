@@ -6,7 +6,7 @@
 
 /* ~ Hunter Lib ~                               */
 /* For hunting down memory leaks.               */
-/* Inspired by Eskils "How I Program C" talk.   */
+/* Inspired by Eskil Steenberg's "How I Program C" talk.   */
 
 void *hunter_malloc(size_t size, char *file, int line);
 void hunter_free(void *ptr);
