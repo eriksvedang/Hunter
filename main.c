@@ -1,9 +1,11 @@
+#define HUNTER_ENABLED
+
 #include "hunter.h"
 
 int main() {
-  int *ip = MALLOC(sizeof(int));
-  float *fp = MALLOC(sizeof(float));
-  char *sp = MALLOC(sizeof(char*) * 256);
-  FREE(fp);
+  int *ip = malloc(sizeof(int));
+  float *fp = malloc(sizeof(float));
+  char *sp = malloc(sizeof(char*) * 256);
+  free(fp);
   hunter_print_allocations();
 }
