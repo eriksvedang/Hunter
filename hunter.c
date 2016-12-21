@@ -41,7 +41,8 @@ void *hunter_malloc(size_t size, char *file, int line) {
 }
 
 void hunter_free(void *ptr) {
-    for(int i = 0; i < alloc_counter; i++) {
+    // Looks from the end because we might find duplicates and are interested in the last allocation
+    for(int i = alloc_counter - 1; i >= 0; i--) {
         if(allocations[i].memory == ptr) {
             allocations[i].freed = 1;
             break;
